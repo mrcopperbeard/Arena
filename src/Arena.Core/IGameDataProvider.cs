@@ -7,7 +7,7 @@ namespace Arena.Core
 	{
 		Task New(Guid sessionUid);
 
-		Task<ITurnResult> MakeTurn(ITurn turn);
+		Task<ITurnResult> MakeTurn(Guid sessionUid, Guid playerToken, ITurn turn);
 
 		Task<IDesk> GetDesk(Guid sessionUid);
 	}

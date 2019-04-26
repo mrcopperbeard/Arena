@@ -19,16 +19,17 @@ namespace Arena.WebAPI.Controllers
 	    }
 
 		[HttpPost]
-	    public async Task<JsonResult> MakeTurn([FromBody]Turn turn)
+		[Route("{sessionUid:guid}")]
+		public async Task<JsonResult> MakeTurn([FromQuery]Guid sessionUid, [FromBody]Turn turn)
 	    {
-		    var turnResult = await _dataProvider.MakeTurn(turn);
+		    var turnResult = await _dataProvider.MakeTurn(sessionUid, default(Guid), turn);
 
 			return new JsonResult(turnResult);
 	    }
 
 		[HttpGet]
-		[Route("sessionUid:guid")]
-	    public async Task<JsonResult> GetDesk(Guid sessionUid)
+		[Route("{sessionUid:guid}")]
+	    public async Task<JsonResult> GetDesk([FromQuery]Guid sessionUid)
 	    {
 		    var desk = await _dataProvider.GetDesk(sessionUid);
 

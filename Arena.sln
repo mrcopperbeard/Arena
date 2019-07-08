@@ -1,15 +1,19 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28307.438
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arena.WebAPI", "src\Arena.WebAPI\Arena.WebAPI.csproj", "{ADE072B2-31C0-49E4-A115-68E13DFD2FEE}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{57CE53F4-6F6C-4D5F-96D2-B22D7EF5E618}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arena.Data", "src\Arena.Data\Arena.Data.csproj", "{E58D36C1-9A71-4290-AE57-276069BC8BE1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arena.Data", "src\Arena.Data\Arena.Data.csproj", "{E58D36C1-9A71-4290-AE57-276069BC8BE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arena.Core", "src\Arena.Core\Arena.Core.csproj", "{17C6036D-8A85-49F3-B9D4-1ED0803168F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Arena.Core", "src\Arena.Core\Arena.Core.csproj", "{17C6036D-8A85-49F3-B9D4-1ED0803168F0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gladiators", "gladiators", "{74BEA6CC-8A32-46B9-83C1-DF1FBB7AAC5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrFirst", "src\gladiators\MrFirst\MrFirst.csproj", "{040C11FD-D131-409B-A623-ECC20A59835F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +33,10 @@ Global
 		{17C6036D-8A85-49F3-B9D4-1ED0803168F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{17C6036D-8A85-49F3-B9D4-1ED0803168F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{17C6036D-8A85-49F3-B9D4-1ED0803168F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{040C11FD-D131-409B-A623-ECC20A59835F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{040C11FD-D131-409B-A623-ECC20A59835F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{040C11FD-D131-409B-A623-ECC20A59835F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{040C11FD-D131-409B-A623-ECC20A59835F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +45,8 @@ Global
 		{ADE072B2-31C0-49E4-A115-68E13DFD2FEE} = {57CE53F4-6F6C-4D5F-96D2-B22D7EF5E618}
 		{E58D36C1-9A71-4290-AE57-276069BC8BE1} = {57CE53F4-6F6C-4D5F-96D2-B22D7EF5E618}
 		{17C6036D-8A85-49F3-B9D4-1ED0803168F0} = {57CE53F4-6F6C-4D5F-96D2-B22D7EF5E618}
+		{74BEA6CC-8A32-46B9-83C1-DF1FBB7AAC5E} = {57CE53F4-6F6C-4D5F-96D2-B22D7EF5E618}
+		{040C11FD-D131-409B-A623-ECC20A59835F} = {74BEA6CC-8A32-46B9-83C1-DF1FBB7AAC5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB454CFE-6211-4A7A-BF06-813F3A7D4E2B}

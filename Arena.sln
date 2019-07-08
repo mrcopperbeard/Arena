@@ -15,6 +15,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "gladiators", "gladiators", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MrFirst", "src\gladiators\MrFirst\MrFirst.csproj", "{040C11FD-D131-409B-A623-ECC20A59835F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestClient", "TestClient\TestClient.csproj", "{68CC9C24-A5E3-4854-84CF-D2EC8EB4723F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{040C11FD-D131-409B-A623-ECC20A59835F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{040C11FD-D131-409B-A623-ECC20A59835F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{040C11FD-D131-409B-A623-ECC20A59835F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{68CC9C24-A5E3-4854-84CF-D2EC8EB4723F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{68CC9C24-A5E3-4854-84CF-D2EC8EB4723F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{68CC9C24-A5E3-4854-84CF-D2EC8EB4723F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{68CC9C24-A5E3-4854-84CF-D2EC8EB4723F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -47,6 +53,7 @@ Global
 		{17C6036D-8A85-49F3-B9D4-1ED0803168F0} = {57CE53F4-6F6C-4D5F-96D2-B22D7EF5E618}
 		{74BEA6CC-8A32-46B9-83C1-DF1FBB7AAC5E} = {57CE53F4-6F6C-4D5F-96D2-B22D7EF5E618}
 		{040C11FD-D131-409B-A623-ECC20A59835F} = {74BEA6CC-8A32-46B9-83C1-DF1FBB7AAC5E}
+		{68CC9C24-A5E3-4854-84CF-D2EC8EB4723F} = {74BEA6CC-8A32-46B9-83C1-DF1FBB7AAC5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {BB454CFE-6211-4A7A-BF06-813F3A7D4E2B}

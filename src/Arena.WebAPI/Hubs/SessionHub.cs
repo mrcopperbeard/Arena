@@ -29,5 +29,12 @@ namespace Arena.WebAPI.Hubs
 
 			return base.OnDisconnectedAsync(exception);
 		}
+
+		public Task RequestTurn()
+		{
+			_logger.LogInformation($"Server sends {nameof(RequestTurn)} message");
+
+			return Clients.All.SendAsync("Turn");
+		}
 	}
 }

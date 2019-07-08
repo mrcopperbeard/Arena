@@ -15,37 +15,41 @@ namespace MrFirst
 
 		private readonly ILogger<PlayerService> _logger;
 
-		private readonly string _title;
+		private readonly IPlayer _player;
+
+		private IDisposable _turnActivity;
 
 		public PlayerService(
-			IPlayerTitleFactory titleFactory,
 			IConfiguration configuration,
-			ILogger<PlayerService> logger)
+			ILogger<PlayerService> logger,
+			IPlayer player)
 		{
-			_title = titleFactory.Create();
 			_logger = logger;
+			_player = player;
 
 			var addressString = configuration.GetConnectionString("GameApi");
 
-			_logger.LogTrace($"Creating player {_title} connecting to {addressString}");
+			_logger.LogTrace($"Creating player {_player.Title} connecting to {addressString}");
 
 			_connection = new HubConnectionBuilder()
 				.WithUrl(new Uri(addressString))
 				.Build();
-
 		}
 
-		public Task StartAsync(CancellationToken cancellationToken)
+		public async Task StartAsync(CancellationToken cancellationToken)
 		{
-			_logger.LogTrace($"Player {_title} entering arena");
+			_logger.LogTrace($"Player {_player.Title} entering arena");
 
-			return _connection.StartAsync(cancellationToken);
+			await _connection.StartAsync(cancellationToken);
+
+			_turnActivity = _connection.On("Turn", async () => await _player.MakeTurn());
 		}
 
 		public async Task StopAsync(CancellationToken cancellationToken)
 		{
-			_logger.LogTrace($"Player {_title} leaves arena");
+			_logger.LogTrace($"Player {_player.Title} leaves arena");
 
+			_turnActivity.Dispose();
 			await _connection.StopAsync(cancellationToken).ConfigureAwait(false);
 			await _connection.DisposeAsync().ConfigureAwait(false);
 		}
